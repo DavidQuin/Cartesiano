@@ -21,11 +21,15 @@ public class Pintor {
         this.lienzo = lienzo;
     }
     
-    public void pasarTamañodePintado(int tamaño){
+    public void pasarTamañodePintado(int tamaño) throws TamañoMayorQueHeightOWidthExcetion, CanvasEsNull{
         this.tamaño = tamaño;
         
             if (tamaño > lienzo.getHeight() || tamaño > lienzo.getWidth()){
-                
+                throw new TamañoMayorQueHeightOWidthExcetion("El Tamaño No puede ser Mayor que el Largo o el Ancho del Canvas.");
+            }
+            
+            if (lienzo == null){
+                throw new CanvasEsNull("Aún no ha asignado ningún Lienzo al objeto Pintor.");
             }
         
     }
@@ -34,5 +38,5 @@ public class Pintor {
         pantallaDeDibujo = (Graphics2D) lienzo.getGraphics();
     }
     
-    
+  
 }
