@@ -45,11 +45,7 @@ public class Pintor {
     
     private void colorPincel(Color color){
         pantallaDeDibujo.setColor(color);
-    }
-    
-    private int FloatAInt(float valorFloat){
-        return Float.floatToIntBits(valorFloat);
-    }
+    }    
     
     
     private void dibujarEjes(){
