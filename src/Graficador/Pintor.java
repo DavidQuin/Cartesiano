@@ -38,5 +38,5 @@ public class Pintor {
         pantallaDeDibujo = (Graphics2D) lienzo.getGraphics();
     }
     
-  
+    
 }
